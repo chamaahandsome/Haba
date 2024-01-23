@@ -4,6 +4,8 @@ import {
   useFinancialConnectionsSheet,
   StripeProvider,
 } from "@stripe/stripe-react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import Button from "../components/stripe/button";
 import { API_URL } from "../components/stripe/Config";
 import { SafeArea } from "../../utils/safe-area.component";
@@ -76,6 +78,13 @@ export const DashboardNavigation = () => {
   return (
     <SafeArea>
       <View style={{ flex: 1, justifyContent: "center" }}>
+        <View style={{ alignItems: "center" }}>
+          <MaterialCommunityIcons
+            name="bank-outline"
+            size={100}
+            color="black"
+          />
+        </View>
         <StripeProvider
           publishableKey="pk_test_51Lqhy0KRh44UL5jkYgkO53zAm4rUjTZkFEPBgJrgmgsm59xoG64ugtfQUR0xFN3KOPjIMhVFRplSQzbwgrg6Gdgr00SHotwGbD"
           urlScheme="your-url-scheme" // required for 3D Secure and bank redirects

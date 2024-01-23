@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 4,
     paddingVertical: 12,
+    marginHorizontal: 64,
     borderRadius: 12,
   },
   primaryContainer: {
