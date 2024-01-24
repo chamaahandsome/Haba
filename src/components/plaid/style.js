@@ -46,6 +46,8 @@ module.exports = StyleSheet.create({
     marginHorizontal: 10,
   },
   bottom: {
+    flex: 1,
+    alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FFFFFF",
     paddingHorizontal: 32,

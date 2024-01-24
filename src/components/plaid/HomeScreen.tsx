@@ -39,14 +39,14 @@ export const HomeScreen = ({ navigation }: any) => {
       <View style={styles.heading}>
         <Text style={styles.titleText}>Haba</Text>
       </View>
-      <View style={{ alignItems: "center", backgroundColor: "white"}}>
+      <View style={styles.bottom}>
           <MaterialCommunityIcons
             name="bank-outline"
             size={100}
             color="black"
           />
-        </View>
-      <View style={styles.bottom}>
+       
+      
         <PlaidLink
           tokenConfig={{
             token: linkToken,
