@@ -6,9 +6,24 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import { ThemeProvider } from "styled-components/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 
 import { SafeArea } from "./utils/safe-area.component";
-import { DashboardNavigation } from "./src/navigation/dashboard-navigation";
+import { DashboardPlaidNavigation } from "./src/screens/dashboard-plaid.navigation";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCindGm70kUEQaL66Afr3-183c-fmJLtA8",
+  authDomain: "habapay-8e6b1.firebaseapp.com",
+  projectId: "habapay-8e6b1",
+  storageBucket: "habapay-8e6b1.appspot.com",
+  messagingSenderId: "21367525007",
+  appId: "1:21367525007:web:4254040e45f0a860d3aafa",
+  measurementId: "G-7TNZZPZX08",
+};
+
+const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 const Tab = createBottomTabNavigator();
 
@@ -62,7 +77,7 @@ export default function App() {
         <Tab.Navigator screenOptions={createScreenOptions}>
           <Tab.Screen
             name="Dashboard"
-            component={DashboardNavigation}
+            component={DashboardPlaidNavigation}
             // options={{ headerShown: false }}
           />
           <Tab.Screen

@@ -2,15 +2,16 @@ import React from "react";
 import { Alert, View } from "react-native";
 import {
   useFinancialConnectionsSheet,
+  collectFinancialConnectionsAccounts,
   StripeProvider,
 } from "@stripe/stripe-react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import Button from "../components/stripe/button";
-import { API_URL } from "../components/stripe/Config";
+import { API_URL } from "../components/stripe/config";
 import { SafeArea } from "../../utils/safe-area.component";
 
-export const DashboardNavigation = () => {
+export const DashboardStripeNavigation = () => {
   const [clientSecret, setClientSecret] = React.useState("");
   const {
     loading,
@@ -37,26 +38,26 @@ export const DashboardNavigation = () => {
     }
   };
 
-  const handleCollectTokenPress = async () => {
-    const { session, token, error } = await collectBankAccountToken(
-      clientSecret
-    );
+  // const handleCollectTokenPress = async () => {
+  //   const { session, token, error } = await collectBankAccountToken(
+  //     clientSecret
+  //   );
 
-    if (error) {
-      Alert.alert(`Error code: ${error.code}`, error.message);
-      console.log(error);
-    } else {
-      Alert.alert("Success");
-      console.log(
-        "Successfully obtained session: ",
-        JSON.stringify(session, null, 2)
-      );
-      console.log(
-        "Successfully obtained token: ",
-        JSON.stringify(token, null, 2)
-      );
-    }
-  };
+  //   if (error) {
+  //     Alert.alert(`Error code: ${error.code}`, error.message);
+  //     console.log(error);
+  //   } else {
+  //     Alert.alert("Success");
+  //     console.log(
+  //       "Successfully obtained session: ",
+  //       JSON.stringify(session, null, 2)
+  //     );
+  //     console.log(
+  //       "Successfully obtained token: ",
+  //       JSON.stringify(token, null, 2)
+  //     );
+  //   }
+  // };
 
   const handleCollectSessionPress = async () => {
     const { session, error } = await collectFinancialConnectionsAccounts(
