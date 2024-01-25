@@ -11,6 +11,7 @@ import { initializeApp } from "firebase/app";
 
 import { SafeArea } from "./utils/safe-area.component";
 import { DashboardPlaidNavigation } from "./src/screens/dashboard-plaid.navigation";
+import { HabaTabs } from "./src/screens/tabs";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCindGm70kUEQaL66Afr3-183c-fmJLtA8",
@@ -74,7 +75,8 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator screenOptions={createScreenOptions}>
+        <HabaTabs />
+        {/* <Tab.Navigator screenOptions={createScreenOptions}>
           <Tab.Screen
             name="Dashboard"
             component={DashboardPlaidNavigation}
@@ -100,7 +102,7 @@ export default function App() {
             component={Profile}
             // options={{ headerShown: false }}
           />
-        </Tab.Navigator>
+        </Tab.Navigator> */}
       </NavigationContainer>
 
       <ExpoStatusBar style="auto" />
