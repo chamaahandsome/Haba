@@ -4,6 +4,8 @@ import { Platform, View, Text, StyleSheet } from 'react-native';
 import {PlaidLink, LinkExit, LinkSuccess } from 'react-native-plaid-link-sdk';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
+import { SafeArea } from '../../../utils/safe-area.component';
+
 var styles = require('./style');
 
 
@@ -35,6 +37,7 @@ export const HomeScreen = ({ navigation }: any) => {
   }, [linkToken]);
   
   return (
+    <SafeArea>
     <View style={{flex: 1}}>
       <View style={styles.heading}>
         <Text style={styles.titleText}>Haba</Text>
@@ -74,6 +77,7 @@ export const HomeScreen = ({ navigation }: any) => {
         </PlaidLink>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

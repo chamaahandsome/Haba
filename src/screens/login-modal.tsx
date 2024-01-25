@@ -3,6 +3,8 @@ import { Button, Text, View } from "react-native";
 import Modal from "react-native-modal";
 import { Dimensions } from "react-native";
 
+import { SafeArea } from '../../utils/safe-area.component';
+
 const width = Dimensions.get('window').width; //full width
 const height = Dimensions.get('window').height; //full height
 
@@ -19,6 +21,7 @@ export const LoginModal = ({ isModalVisible, setModalVisible, modalText }: Login
   };
 
   return (
+    <SafeArea>
     <View style={isModalVisible ? { flex: 1, height: 200, width: width * .9, backgroundColor: modalText === 'Logged in!' ? 'green' : 'red', borderRadius: 20 } : { display: 'none' }}>
 
       <Modal isVisible={isModalVisible} >
@@ -28,6 +31,7 @@ export const LoginModal = ({ isModalVisible, setModalVisible, modalText }: Login
         </View>
       </Modal>
     </View>
+    </SafeArea>
   );
 
 }

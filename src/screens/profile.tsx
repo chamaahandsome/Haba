@@ -9,7 +9,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import {LoginModal} from './login-modal';
 import {UserService} from '../services/user-services';
 import { User } from '../services/interfaces';
-
+import { SafeArea } from '../../utils/safe-area.component';
 
 export const Profile = () => {
   const [hidePassword, setHidePassword] = useState(true);
@@ -80,9 +80,10 @@ export const Profile = () => {
   if (!Object.keys(user).length) return <View><Text>Loading...</Text></View>;
 
   return (
+    <SafeArea>
     <View style={styles.container}>
       <View>
-        <Image style={styles.imageContainer} source={!user.images.length ? require('../assets/Default_pfp.png') : { uri: user.images[0] }} />
+        <Image style={styles.imageContainer} source={!user.images.length ? require('../../assets/Default_pfp.png') : { uri: user.images[0] }} />
       </View>
       <View style={styles.formContainer}>
 
@@ -133,6 +134,7 @@ export const Profile = () => {
         </Pressable>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

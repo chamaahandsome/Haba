@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Pressable, Text, StyleSheet } from "react-native";
+import { SafeArea } from '../../utils/safe-area.component';
+
 
 export const TransactionFilters = ({ onDayClick, onWeekClick, onMonthClick, onInboundClick, onAllClick, onOutboundClick, date, inboundOutbound }) => {
   return (
+    <SafeArea>
     <View style={styles.container}>
       <View style={styles.timePeriodContainer}>
 
@@ -29,6 +32,7 @@ export const TransactionFilters = ({ onDayClick, onWeekClick, onMonthClick, onIn
         </Pressable>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

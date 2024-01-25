@@ -10,6 +10,7 @@ import {Profile} from './profile';
 import {Home} from './home-page';
 import {Login} from './login';
 import {LinkedAccounts} from './linked-accounts';
+import { SafeArea } from '../../utils/safe-area.component';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,12 +37,13 @@ export const HabaTabs = () => {
 
   if (!loggedIn) return <Home />;
   return (
-
+    <SafeArea>
     <Tab.Navigator screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: '#1A1C46' } }} initialRouteName="Transactions" >
       <Tab.Screen name="Profile" component={Profile} options={{ tabBarActiveTintColor: '#FC0086' }} />
       <Tab.Screen name="Transactions" component={MainPage} options={{ tabBarActiveTintColor: '#FC0086' }} />
       <Tab.Screen name="Linked Accounts" component={LinkedAccounts} options={{ tabBarActiveTintColor: '#FC0086' }} />
     </Tab.Navigator>
+    </SafeArea>
   );
 }
 

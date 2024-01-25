@@ -7,6 +7,7 @@ import {Ionicons} from '@expo/vector-icons';
 
 import { UserService } from '../services/user-services';
 import {LoginModal} from './login-modal';
+import { SafeArea } from '../../utils/safe-area.component';
 
 
 export const Login = ({ changeType, navigation }: any) => {
@@ -70,6 +71,7 @@ export const Login = ({ changeType, navigation }: any) => {
   };
 
   return (
+    <SafeArea>
     <View style={styles.container}>
       <Spinner
         visible={showLoadingSpinner}
@@ -81,7 +83,7 @@ export const Login = ({ changeType, navigation }: any) => {
 
         <LoginModal isModalVisible={isModalVisible} setModalVisible={setModalVisible} modalText={modalText} />
       </View>
-      <Text style={styles.title}>Money Management</Text>
+      <Text style={styles.title}>Haba</Text>
 
       <View style={styles.buttonContainer}>
 
@@ -148,6 +150,7 @@ export const Login = ({ changeType, navigation }: any) => {
         </Pressable>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Text, View, ToastAndroid, Platform, Alert } from 'react-native';
 var styles = require('./style');
+import { SafeArea } from '../../../utils/safe-area.component';
 
 export const SuccessScreen = ({ navigation, route }: any) => {
     const [data, setData] = useState(null);
@@ -30,6 +31,7 @@ export const SuccessScreen = ({ navigation, route }: any) => {
     }, [data]);
 
     return (
+        <SafeArea>
         <View style={{ flex: 1 }}>
             <View style={styles.heading}>
                 <Text style={styles.titleText}>Balance Response</Text>
@@ -38,6 +40,7 @@ export const SuccessScreen = ({ navigation, route }: any) => {
                 <Text style={styles.baseText}>{JSON.stringify(data)}</Text>
             </View>
         </View>
+        </SafeArea>
     );
 };
 function notifyMessage(msg: string) {

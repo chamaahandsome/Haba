@@ -11,6 +11,7 @@ import {Transactions} from "./transactions";
 import { TransactionInterface, IArrayOfStrings, PaymentMeta, FormattedDate } from '../services/interfaces';
 import {TransactionFilters} from "./transaction-filters";
 import {BackgroundComponent} from "../components/background-component";
+import { SafeArea } from '../../utils/safe-area.component';
 
 export const MainPage = ({ navigation }) => {
   const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
@@ -306,6 +307,7 @@ export const MainPage = ({ navigation }) => {
   if (!transactions.length) return <View><Text>Loading...</Text></View>;
 
   return (
+    <SafeArea>
     <View style={{ display: 'flex', backgroundColor: '#1A1C46' }}>
       <View style={scrollingDraw ? { display: 'none' } : { zIndex: 1, elevation: 1, position: 'absolute' }}>
 
@@ -350,6 +352,7 @@ export const MainPage = ({ navigation }) => {
 
       </ScrollView>
     </View >
+    </SafeArea>
   );
 };
 

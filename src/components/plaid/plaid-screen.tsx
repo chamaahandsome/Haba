@@ -1,13 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Image, ScrollView, Dimensions, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
 import {PlaidHome} from './plaid-home';
 import {HabaTabs} from '../../screens/tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { SafeArea } from '../../../utils/safe-area.component';
 
 const height = Dimensions.get('window').height;
 
 export const PlaidConnection = ({ navigation }: any) => {
   return (
+    <SafeArea>
     <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
       <View style={{ top: 50 }}>
 
@@ -27,7 +30,7 @@ export const PlaidConnection = ({ navigation }: any) => {
 
       <View style={styles.container}>
         <Text style={styles.title}>Link your bank accounts</Text>
-        <Text style={styles.text}>By clicking the below button, you will be taken through our open banking service providers (Plaid) pop up web app. This is fully secure, and has all the UK's major banking companies for you to link all of your bank accounts to Dans Money.</Text>
+        <Text style={styles.text}>By clicking the below button, you will be taken through our open banking service providers (Plaid) pop up web app. This is fully secure, and has all the UK's major banking companies for you to link all of your bank accounts.</Text>
 
         <ScrollView>
           <Image source={require('../finance1.png')} />
@@ -39,6 +42,7 @@ export const PlaidConnection = ({ navigation }: any) => {
         <MyTabs />
       </NavigationContainer> */}
     </ScrollView>
+    </SafeArea>
   );
 };
 

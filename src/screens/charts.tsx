@@ -9,6 +9,8 @@ import {
   StackedBarChart
 } from "react-native-chart-kit";
 
+import { SafeArea } from '../../utils/safe-area.component';
+
 export const Charts = ({ data, labels, type }: { data: any; labels: any; type: string; }) => {
 
   const onDataClick = (e: any) => {
@@ -17,6 +19,7 @@ export const Charts = ({ data, labels, type }: { data: any; labels: any; type: s
     ]);
   };
   return (
+    <SafeArea>
     <ScrollView style={{ height: 300, margin: 'auto' }} contentContainerStyle={{ justifyContent: 'center', margin: 'auto', alignContent: 'center', alignItems: 'center', marginRight: 10 }}>
       {type === 'line' ? (
         <LineChart
@@ -87,6 +90,7 @@ export const Charts = ({ data, labels, type }: { data: any; labels: any; type: s
       )}
 
     </ScrollView>
+    </SafeArea>
   );
 };
 

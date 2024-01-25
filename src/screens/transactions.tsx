@@ -6,6 +6,7 @@ import getSymbolFromCurrency from 'currency-symbol-map';
 
 import { FormattedDate, TransactionInterface } from '../services/interfaces';
 import {Category} from '../components/plaid/plaid-categories';
+import { SafeArea } from '../../utils/safe-area.component';
 
 
 // const Transaction = ({ transaction, show, hide }: { [key: string]: TransactionInterface; }) => {
@@ -20,6 +21,7 @@ export const Transactions = ({ transaction, show, hide }: { [key: string]: Trans
     );
 
   return (
+    <SafeArea>
     <View style={styles.container}>
       <View style={styles.left}>
         <View style={{
@@ -44,6 +46,7 @@ export const Transactions = ({ transaction, show, hide }: { [key: string]: Trans
         <Text style={{ fontSize: 20, color: '#CBD3F7', position: 'absolute', zIndex: 9999, elevation: 10000 }}>{getSymbolFromCurrency(transaction.iso_currency_code)}{transaction.amount.toString().indexOf('.') > 0 ? transaction.amount.toFixed(2) : transaction.amount}</Text>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

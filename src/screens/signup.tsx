@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, Pressable, Dimensions } from 'react-
 import { useForm, Controller } from "react-hook-form";
 
 import {UserService} from '../services/user-services';
+import { SafeArea } from '../../utils/safe-area.component';
 
 const width = Dimensions.get('window').width; //full width
 const height = Dimensions.get('window').height; //full height
@@ -36,8 +37,9 @@ export const SignUp = ({ changeType }: any) => {
       });
   };
   return (
+    <SafeArea>
     <View style={styles.container}>
-      <Text style={styles.title}>Money Management</Text>
+      <Text style={styles.title}>Haba</Text>
 
       <View style={styles.buttonContainer}>
 
@@ -160,6 +162,7 @@ export const SignUp = ({ changeType }: any) => {
         </Pressable>
       </View>
     </View>
+    </SafeArea>
   );
 };
 

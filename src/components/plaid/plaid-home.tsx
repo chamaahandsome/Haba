@@ -2,8 +2,10 @@ import { link } from 'fs';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Platform, View, Text, StyleSheet, ScrollView, Button, Pressable, Alert } from 'react-native';
 import { PlaidLink, LinkExit, LinkSuccess } from 'react-native-plaid-link-sdk';
-import {UserService} from '../../services/user-services';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import {UserService} from '../../services/user-services';
+import { SafeArea } from '../../../utils/safe-area.component';
 
 export const PlaidHome = ({ navigation }: any) => {
   const [linkToken, setLinkToken] = useState('');
@@ -65,6 +67,7 @@ export const PlaidHome = ({ navigation }: any) => {
   };
 
   return (
+    <SafeArea>
     <View style={{ flex: 1 }}>
 
       <View style={styles.bottom}>
@@ -83,6 +86,7 @@ export const PlaidHome = ({ navigation }: any) => {
 
       </View>
     </View>
+    </SafeArea>
   );
 };
 

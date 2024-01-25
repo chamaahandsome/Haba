@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, Dimensions } from 'react-native';
 
 import { Login } from './login';
 import { SignUp } from './signup';
+import { SafeArea } from '../../utils/safe-area.component';
 
 
 
@@ -17,6 +18,7 @@ export const Home = ({ navigation }: any) => {
   };
 
   return (
+    <SafeArea>
     <ScrollView style={styles.container} >
       {type === 'login' ? (
         <Login changeType={changeType} navigation={navigation} />
@@ -27,6 +29,7 @@ export const Home = ({ navigation }: any) => {
       }
 
     </ScrollView>
+    </SafeArea>
 
   );
 };

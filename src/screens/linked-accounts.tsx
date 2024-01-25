@@ -6,6 +6,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 import {UserService} from '../services/user-services';
 import { LinkedAccount } from '../services/interfaces';
+import { SafeArea } from '../../utils/safe-area.component';
 
 
 const height = Dimensions.get('window').height;
@@ -44,6 +45,7 @@ export const LinkedAccounts = () => {
 
   console.log(accounts, 'accounts123');
   return (
+    <SafeArea>
     <View style={styles.container}>
       <Text style={styles.title}>Linked accounts</Text>
       <FlatList data={accounts} renderItem={({ item, index }) => {
@@ -64,6 +66,7 @@ export const LinkedAccounts = () => {
         );
       }} />
     </View >
+    </SafeArea>
   );
 };
 
