@@ -121,7 +121,7 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
 import { SafeArea } from "./utils/safe-area.component";
-import { DashboardPlaidNavigation } from "./src/screens/dashboard-plaid.navigation";
+import { DashboardPage } from "./src/screens/dashboard";
 import { AuthenticationContextProvider } from "./src/authentication/authentication.context";
 import { HabaTabs } from "./src/screens/tabs";
 
@@ -191,7 +191,7 @@ export default function App() {
           <Tab.Navigator screenOptions={createScreenOptions}>
             <Tab.Screen
               name="Dashboard"
-              component={DashboardPlaidNavigation}
+              component={DashboardPage}
               // options={{ headerShown: false }}
             />
             <Tab.Screen
