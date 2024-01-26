@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-import {LoginModal} from './login-modal';
+// import {LoginModal} from './login-modal';
 import {UserService} from '../services/user-services';
 import { User } from '../services/interfaces';
 import { SafeArea } from '../../utils/safe-area.component';

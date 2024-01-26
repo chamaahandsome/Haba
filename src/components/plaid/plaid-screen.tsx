@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Pressable, Image, ScrollView, Dimensions, Butto
 import { NavigationContainer } from '@react-navigation/native';
 
 import {PlaidHome} from './plaid-home';
-import {HabaTabs} from '../../screens/tabs';
+// import {HabaTabs} from '../../screens/tabs';
 import { SafeArea } from '../../../utils/safe-area.component';
 
 const height = Dimensions.get('window').height;
@@ -33,7 +33,7 @@ export const PlaidConnection = ({ navigation }: any) => {
         <Text style={styles.text}>By clicking the below button, you will be taken through our open banking service providers (Plaid) pop up web app. This is fully secure, and has all the UK's major banking companies for you to link all of your bank accounts.</Text>
 
         <ScrollView>
-          <Image source={require('../finance1.png')} />
+          <Image source={require('../../../assets/finance1.jpg')} />
         </ScrollView>
 
         <PlaidHome navigation={navigation} />

@@ -13,7 +13,8 @@ import {TransactionFilters} from "./transaction-filters";
 import {BackgroundComponent} from "../components/background-component";
 import { SafeArea } from '../../utils/safe-area.component';
 
-export const MainPage = ({ navigation }) => {
+
+export const Main = ({ navigation }) => {
   const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
   const [transactions, setTransactions] = useState<Array<TransactionInterface>>([]);
   const [snapScore, setSnapScope] = useState(1);
