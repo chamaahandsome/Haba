@@ -135,7 +135,7 @@ const firebaseConfig = {
   measurementId: "G-7TNZZPZX08",
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 const Tab = createBottomTabNavigator();

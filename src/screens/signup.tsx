@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable, Dimensions, ScrollView } from 'react-native';
 import { useForm, Controller } from "react-hook-form";
 
@@ -9,6 +9,7 @@ const width = Dimensions.get('window').width; //full width
 const height = Dimensions.get('window').height; //full height
 
 export const SignUp = ({ changeType }: any) => {
+  const [hidePassword, setHidePassword] = useState(true);
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
       first_name: '',
@@ -36,6 +37,11 @@ export const SignUp = ({ changeType }: any) => {
         console.log(err, 'err123');
       });
   };
+
+  const handlePress = () => {
+    setHidePassword(!hidePassword);
+  };
+
   return (
   <ScrollView contentContainerStyle={{ paddingBottom: 200 }}>
     <View style={styles.container}>
@@ -118,6 +124,8 @@ export const SignUp = ({ changeType }: any) => {
               onChangeText={onChange}
               value={value}
               placeholder='password'
+              autoCapitalize='none'
+              secureTextEntry={hidePassword}
             />
           )}
           name="password"
