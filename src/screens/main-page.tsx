@@ -308,7 +308,7 @@ export const Main = ({ navigation }) => {
   if (!transactions.length) return <View><Text>Loading...</Text></View>;
 
   return (
-    <SafeArea>
+   
     <View style={{ display: 'flex', backgroundColor: '#1A1C46' }}>
       <View style={scrollingDraw ? { display: 'none' } : { zIndex: 1, elevation: 1, position: 'absolute' }}>
 
@@ -353,7 +353,7 @@ export const Main = ({ navigation }) => {
 
       </ScrollView>
     </View >
-    </SafeArea>
+
   );
 };
 

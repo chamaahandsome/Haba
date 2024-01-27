@@ -169,19 +169,19 @@ const styles = StyleSheet.create({
   input: {
     color: 'white',
     marginTop: 20,
-    height: 60,
+    height: 50,
     width: 300,
-    backgroundColor: '#FC0086',
-    borderRadius: 6,
+    backgroundColor: 'white',
+    borderRadius: 1,
     fontSize: 20,
     paddingLeft: 10
   },
   passwordInput: {
     marginTop: 20,
-    height: 60,
+    height: 50,
     width: 300,
-    backgroundColor: '#FC0086',
-    borderRadius: 6,
+    backgroundColor: 'white',
+    borderRadius: 1,
     fontSize: 20,
     paddingLeft: 10,
     margin: 'auto',
@@ -198,9 +198,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#5224D8',
+    backgroundColor: '#00CED1',
 
-    height: 60,
+    height: 50,
     width: 300,
     marginTop: 20
   },

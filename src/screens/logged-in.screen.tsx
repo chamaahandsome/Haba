@@ -7,7 +7,7 @@ import { SafeArea } from '../../utils/safe-area.component';
 
 
 
-const LoggedInScreen = () => {
+export const LoggedInScreen = () => {
   return (
     <SafeArea>
     <View>
@@ -18,4 +18,3 @@ const LoggedInScreen = () => {
   );
 };
 
-export default LoggedInScreen;

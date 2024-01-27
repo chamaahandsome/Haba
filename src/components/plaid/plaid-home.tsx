@@ -78,7 +78,7 @@ export const PlaidHome = ({ navigation }: any) => {
             onSuccess={(success: LinkSuccess) => handleSuccess(success)}
             onExit={(exit: LinkExit) => console.log(exit, 'exist123')}
           >
-            <Text style={styles.buttonText}>Connect a bank account</Text>
+            <Text style={styles.buttonText}>Connect to your Bank</Text>
           </PlaidLink>
 
         </ScrollView>
@@ -135,15 +135,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   buttonText: {
-    borderRadius: 8,
+    borderRadius: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 17,
-    paddingHorizontal: 32,
+    paddingVertical: 15,
+    // paddingHorizontal: 30,
+    textAlign: 'center',
     elevation: 3,
-    backgroundColor: '#FC0086',
+    backgroundColor: '#00CED1',
     fontSize: 19,
-    height: 60,
+    height: 55,
     width: 270,
     marginTop: 40,
     color: 'white',
@@ -154,11 +155,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 4,
+    borderRadius: 1,
     elevation: 3,
-    backgroundColor: '#FC0086',
+    backgroundColor: '#00CED1',
 
-    height: 60,
+    height: 50,
     width: 270,
     marginTop: 20
   },

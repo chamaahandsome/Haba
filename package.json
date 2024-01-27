@@ -9,7 +9,6 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/webpack-config": "^19.0.1",
     "@gorhom/bottom-sheet": "^4.6.0",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/bottom-tabs": "^6.5.11",
@@ -24,8 +23,7 @@
     "currency-symbol-map": "^5.1.0",
     "dotenv": "^16.4.0",
     "expo": "^49.0.22",
-    "expo-dev-client": "^3.3.7",
-    "expo-splash-screen": "^0.26.4",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
@@ -50,7 +48,7 @@
     "react-native-sweet-alert": "^3.5.0",
     "react-native-swipe-up-down": "^1.2.0",
     "react-native-web": "^0.19.10",
-    "react-native-webview": "^13.6.4",
+    "react-native-webview": "13.2.2",
     "rn-sliding-up-panel": "^2.4.6",
     "stripe": "^14.13.0",
     "styled-components": "^6.1.8",

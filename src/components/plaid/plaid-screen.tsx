@@ -4,15 +4,15 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import {PlaidHome} from './plaid-home';
 // import {HabaTabs} from '../../screens/tabs';
-import { SafeArea } from '../../../utils/safe-area.component';
+
 
 const height = Dimensions.get('window').height;
 
 export const PlaidConnection = ({ navigation }: any) => {
   return (
-    <SafeArea>
+
     <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
-      <View style={{ top: 50 }}>
+      {/* <View style={{ top: 50 }}>
 
         <Button
           title="Back to login"
@@ -26,14 +26,16 @@ export const PlaidConnection = ({ navigation }: any) => {
             navigation.navigate('Main', { name: 'Jane' })
           }
         />
-      </View>
+      </View> */}
 
       <View style={styles.container}>
+        <View style={styles.topText}>
         <Text style={styles.title}>Link your bank accounts</Text>
-        <Text style={styles.text}>By clicking the below button, you will be taken through our open banking service providers (Plaid) pop up web app. This is fully secure, and has all the UK's major banking companies for you to link all of your bank accounts.</Text>
+        </View>
+        {/* <Text style={styles.text}>By clicking the below you link all of your bank accounts.</Text> */}
 
         <ScrollView>
-          <Image source={require('../../../assets/finance1.jpg')} />
+          <Image source={require('../../../assets/PlaidLink.png')} />
         </ScrollView>
 
         <PlaidHome navigation={navigation} />
@@ -42,7 +44,7 @@ export const PlaidConnection = ({ navigation }: any) => {
         <MyTabs />
       </NavigationContainer> */}
     </ScrollView>
-    </SafeArea>
+ 
   );
 };
 
@@ -51,11 +53,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    top: 80,
+    top: 40,
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+  },
+  topText: {
+    aliumntext: 'center',
+    justifyContent: 'center',
+    paddingBottom: 20
   },
   text: {
     marginTop: 30,
@@ -70,11 +77,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 4,
+    borderRadius: 1,
     elevation: 3,
-    backgroundColor: '#FC0086',
+    backgroundColor: '#00CED1',
 
-    height: 60,
+    height: 50,
     width: 270,
     marginTop: 20
   },

@@ -122,7 +122,7 @@ import { initializeApp } from "firebase/app";
 
 import { SafeArea } from "./utils/safe-area.component";
 import { DashboardPage } from "./src/screens/dashboard";
-import { AuthenticationContextProvider } from "./src/authentication/authentication.context";
+// import { AuthenticationContextProvider } from "./src/authentication/authentication.context";
 import { HabaTabs } from "./src/screens/tabs";
 
 const firebaseConfig = {
@@ -186,37 +186,36 @@ const createScreenOptions = ({ route }) => {
 export default function App() {
   return (
     <>
-      <AuthenticationContextProvider>
-        <NavigationContainer>
-          <Tab.Navigator screenOptions={createScreenOptions}>
-            <Tab.Screen
-              name="Dashboard"
-              component={DashboardPage}
-              // options={{ headerShown: false }}
-            />
-            <Tab.Screen
-              name="Transactions"
-              component={Transactions}
-              // options={{ headerShown: false }}
-            />
-            <Tab.Screen
-              name="Cards"
-              component={Cards}
-              // options={{ headerShown: false }}
-            />
-            <Tab.Screen
-              name="Wallet"
-              component={Wallet}
-              // options={{ headerShown: false }}
-            />
-            <Tab.Screen
-              name="Profile"
-              component={Profile}
-              // options={{ headerShown: false }}
-            />
-          </Tab.Navigator>
-        </NavigationContainer>
-      </AuthenticationContextProvider>
+      <NavigationContainer>
+        <Tab.Navigator screenOptions={createScreenOptions}>
+          <Tab.Screen
+            name="Dashboard"
+            component={DashboardPage}
+            // options={{ headerShown: false }}
+          />
+          <Tab.Screen
+            name="Transactions"
+            component={Transactions}
+            // options={{ headerShown: false }}
+          />
+          <Tab.Screen
+            name="Cards"
+            component={Cards}
+            // options={{ headerShown: false }}
+          />
+          <Tab.Screen
+            name="Wallet"
+            component={Wallet}
+            // options={{ headerShown: false }}
+          />
+          <Tab.Screen
+            name="Profile"
+            component={Profile}
+            // options={{ headerShown: false }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+
       <ExpoStatusBar style="auto" />
     </>
   );

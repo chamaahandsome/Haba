@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Pressable, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, Dimensions, ScrollView } from 'react-native';
 import { useForm, Controller } from "react-hook-form";
 
 import {UserService} from '../services/user-services';
-import { SafeArea } from '../../utils/safe-area.component';
+
 
 const width = Dimensions.get('window').width; //full width
 const height = Dimensions.get('window').height; //full height
@@ -37,7 +37,7 @@ export const SignUp = ({ changeType }: any) => {
       });
   };
   return (
-    <SafeArea>
+  <ScrollView contentContainerStyle={{ paddingBottom: 200 }}>
     <View style={styles.container}>
       <Text style={styles.title}>Haba</Text>
 
@@ -162,7 +162,7 @@ export const SignUp = ({ changeType }: any) => {
         </Pressable>
       </View>
     </View>
-    </SafeArea>
+    </ScrollView>
   );
 };
 
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    top: '15%',
+    top: '5%',
   },
   title: {
     fontSize: 30,
@@ -180,10 +180,10 @@ const styles = StyleSheet.create({
   },
   input: {
     marginTop: 20,
-    height: 60,
+    height: 50,
     width: 300,
     backgroundColor: 'white',
-    borderRadius: 6,
+    borderRadius: 1,
     fontSize: 20,
     paddingLeft: 10
   },
@@ -191,11 +191,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
+    paddingHorizontal: 25,
+    borderRadius: 1,
     elevation: 3,
-    backgroundColor: '#FC0086',
-    height: 60,
+    backgroundColor: '#00CED1',
+    height: 50,
     width: 300,
     marginTop: 20,
   },
@@ -226,9 +226,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#FC0086',
-
-    height: 60,
+    backgroundColor: '#00CED1',
+    borderRadius: 1,
+    height: 50,
     width: 140,
     marginTop: 20,
     marginRight: 10,
