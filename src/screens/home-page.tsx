@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, Dimensions } from 'react-native';
+import styled from 'styled-components/native';
 
 import { Login } from './login';
 import { SignUp } from './signup';
 
-
-
-
-const width = Dimensions.get('window').width; //full width
-const height = Dimensions.get('window').height; //full height
+const HomeContainer = styled.ScrollView`
+  background-color: #1D1D1D;
+  height: 100%;
+  width: 100%;
+`;
 
 export const Home = ({ navigation }: any) => {
   const [type, setType] = useState('login');
@@ -18,8 +19,7 @@ export const Home = ({ navigation }: any) => {
   };
 
   return (
- 
-    <ScrollView style={styles.container} >
+    <HomeContainer>
       {type === 'login' ? (
         <Login changeType={changeType} navigation={navigation} />
       ) :
@@ -27,22 +27,6 @@ export const Home = ({ navigation }: any) => {
           <SignUp changeType={changeType} />
         )
       }
-
-    </ScrollView>
-    
-
+    </HomeContainer>
   );
 };
-
-
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    backgroundColor: '#1D1D1D',
-    height: '100%',
-    // height: height,
-    width: '100%'
-  }
-});
-
-

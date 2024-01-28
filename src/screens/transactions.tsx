@@ -87,3 +87,123 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   }
 });
+
+// import styled from 'styled-components/native';
+// import { FontAwesome } from '@expo/vector-icons';
+// import getSymbolFromCurrency from 'currency-symbol-map';
+
+// import { TransactionInterface } from '../services/interfaces';
+// import { Category } from '../components/plaid/plaid-categories';
+// import { SafeArea } from '../../utils/safe-area.component';
+
+// const TransactionContainer = styled.View`
+//   color: #fff;
+//   height: 100px;
+//   border-bottom-color: grey;
+//   border-width: 2px;
+//   margin-bottom: 10px;
+//   width: ${Dimensions.get("window").width}px;
+//   display: flex;
+//   flex-direction: row;
+//   flex-grow: 4;
+// `;
+
+// const LeftContainer = styled.View`
+//   flex-basis: 15%;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
+// const CenterContainer = styled.View`
+//   flex-basis: 65%;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   padding-right: 14px;
+//   padding-left: 10px;
+// `;
+
+// const RightContainer = styled.View`
+//   flex-basis: 20%;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+// `;
+
+// const TransactionName = styled.Text`
+//   font-size: 18px;
+//   color: #cbd3f7;
+// `;
+
+// const PaymentChannel = styled.Text`
+//   color: #cbd3f7;
+// `;
+
+// const Amount = styled.Text`
+//   font-size: 20px;
+//   color: #cbd3f7;
+//   position: absolute;
+//   z-index: 9999;
+//   elevation: 10000;
+// `;
+
+// interface TransactionsProps {
+//   transaction: TransactionInterface;
+// }
+
+// export const Transactions: React.FC<TransactionsProps> = ({ transaction }) => {
+//   const upperCaseFirstLetter = (string: string) =>
+//     `${string.slice(0, 1).toUpperCase()}${string.slice(1)}`;
+
+//   const lowerCaseAllWordsExceptFirstLetters = (string: string) =>
+//     string.replaceAll(/\S*/g, (word: string) =>
+//       `${word.slice(0, 1)}${word.slice(1).toLowerCase()}`
+//     );
+
+//   return (
+//     <SafeArea>
+//       <TransactionContainer>
+//         <LeftContainer>
+//           <View
+//             style={{
+//               backgroundColor: '#FC0086',
+//               shadowRadius: 8,
+//               borderRadius: 10,
+//               justifyContent: 'center',
+//               alignContent: 'center',
+//               alignItems: 'center',
+//               height: '50%',
+//               width: '80%',
+//             }}
+//           >
+//             <FontAwesome
+//               name={
+//                 Category.categories.filter(
+//                   (el) => el.category_id === transaction.category_id
+//                 )[0].icon ?? 'random'
+//               }
+//               size={30}
+//               color="#4B0D60"
+//             />
+//           </View>
+//         </LeftContainer>
+//         <CenterContainer>
+//           <TransactionName>
+//             {upperCaseFirstLetter(
+//               lowerCaseAllWordsExceptFirstLetters(transaction.name)
+//             )}
+//           </TransactionName>
+//           <PaymentChannel>{transaction.payment_channel}</PaymentChannel>
+//         </CenterContainer>
+//         <RightContainer>
+//           <Amount>
+//             {getSymbolFromCurrency(transaction.iso_currency_code)}
+//             {transaction.amount.toString().indexOf('.') > 0
+//               ? transaction.amount.toFixed(2)
+//               : transaction.amount}
+//           </Amount>
+//         </RightContainer>
+//       </TransactionContainer>
+//     </SafeArea>
+//   );
+// };

@@ -86,3 +86,81 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
 });
+
+// import React from 'react';
+// import styled from 'styled-components/native';
+// import { SafeArea } from '../../utils/safe-area.component';
+
+// const Container = styled.View`
+//   margin-top: -50px;
+//   position: relative;
+//   z-index: -2;
+// `;
+
+// const TimePeriodContainer = styled.View`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   position: relative;
+//   z-index: 1;
+//   elevation: 1;
+// `;
+
+// const Button = styled.Pressable`
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 4px;
+//   elevation: 1;
+//   height: 50px;
+//   margin-top: 20px;
+//   flex-basis: 25%;
+//   position: relative;
+//   z-index: 1;
+// `;
+
+// const Text = styled.Text`
+//   font-size: 16px;
+//   line-height: 21px;
+//   font-weight: bold;
+//   letter-spacing: 0.25px;
+//   color: white;
+// `;
+
+// const ActiveButton = styled(Button)`
+//   background-color: #5224D8;
+// `;
+
+// const InactiveButton = styled(Button)`
+//   background-color: #FC0086;
+// `;
+
+// export const TransactionFilters = ({ onDayClick, onWeekClick, onMonthClick, onInboundClick, onAllClick, onOutboundClick, date, inboundOutbound }) => {
+//   return (
+//     <SafeArea>
+//       <Container>
+//         <TimePeriodContainer>
+//           <InactiveButton onPress={onDayClick}>
+//             <Text>Day</Text>
+//           </InactiveButton>
+//           <InactiveButton onPress={onWeekClick}>
+//             <Text>Week</Text>
+//           </InactiveButton>
+//           <InactiveButton onPress={onMonthClick}>
+//             <Text>Month</Text>
+//           </InactiveButton>
+//         </TimePeriodContainer>
+//         <TimePeriodContainer>
+//           <InactiveButton onPress={onInboundClick}>
+//             <Text>Inbound</Text>
+//           </InactiveButton>
+//           <InactiveButton onPress={onAllClick}>
+//             <Text>All</Text>
+//           </InactiveButton>
+//           <InactiveButton onPress={onOutboundClick}>
+//             <Text>Outbound</Text>
+//           </InactiveButton>
+//         </TimePeriodContainer>
+//       </Container>
+//     </SafeArea>
+//   );
+// };
