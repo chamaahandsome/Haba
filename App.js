@@ -120,6 +120,7 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 
 import { initializeApp } from "firebase/app";
+
 // import { getAnalytics } from "firebase/analytics";
 
 import { theme } from "./src/components/theme";
@@ -137,6 +138,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
 // const analytics = getAnalytics(app);
 
 export default function App() {

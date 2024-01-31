@@ -80,7 +80,7 @@ export const Profile = () => {
   if (!Object.keys(user).length) return <View><Text>Loading...</Text></View>;
 
   return (
-    <SafeArea>
+
     <View style={styles.container}>
       <View>
         <Image style={styles.imageContainer} source={!user.images.length ? require('../../assets/Default_pfp.png') : { uri: user.images[0] }} />
@@ -134,7 +134,7 @@ export const Profile = () => {
         </Pressable>
       </View>
     </View>
-    </SafeArea>
+
   );
 };
 

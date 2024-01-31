@@ -15,8 +15,7 @@ import { AuthenticationContext } from "../../authentication/authentication.conte
 
 export const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
   const { onRegister, isLoading, error } = useContext(AuthenticationContext);
@@ -25,25 +24,6 @@ export const RegisterScreen = ({ navigation }) => {
       <AccountCover />
       <Title>Haba</Title>
       <AccountContainer>
-        {/* <AuthInput
-          label="First Name"
-          value={firstName}
-          textContentType="name"
-          keyboardType="default"
-          autoCapitalize="none"
-          onChangeText={(u) => setFirstName(u)}
-        />
-        <Spacer size="large">
-          <AuthInput
-            label="Last Name"
-            value={lastName}
-            textContentType="name"
-            keyboardType="default"
-            autoCapitalize="none"
-            onChangeText={(u) => setLastName(u)}
-          />
-        </Spacer>
-        <Spacer size="large"> */}
         <AuthInput
           label="E-mail"
           value={email}
@@ -52,7 +32,7 @@ export const RegisterScreen = ({ navigation }) => {
           autoCapitalize="none"
           onChangeText={(u) => setEmail(u)}
         />
-        {/* </Spacer> */}
+
         <Spacer size="large">
           <AuthInput
             label="Password"

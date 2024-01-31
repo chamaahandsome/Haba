@@ -1,11 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { DashboardPage } from "../screens/dashboard";
+import { Profile } from "../screens/profile";
+import { SafeArea } from "../../utils/safe-area.component";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,12 +36,6 @@ const Wallet = () => (
   </SafeArea>
 );
 
-const Profile = () => (
-  <SafeArea>
-    <Text>Profile</Text>
-  </SafeArea>
-);
-
 const createScreenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
   return {
@@ -53,33 +48,31 @@ const createScreenOptions = ({ route }) => {
 };
 
 export const AppNavigator = () => (
-  <NavigationContainer>
-    <Tab.Navigator screenOptions={createScreenOptions}>
-      <Tab.Screen
-        name="Dashboard"
-        component={DashboardPage}
-        // options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Transactions"
-        component={Transactions}
-        // options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Cards"
-        component={Cards}
-        // options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Wallet"
-        component={Wallet}
-        // options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        // options={{ headerShown: false }}
-      />
-    </Tab.Navigator>
-  </NavigationContainer>
+  <Tab.Navigator screenOptions={createScreenOptions}>
+    <Tab.Screen
+      name="Dashboard"
+      component={DashboardPage}
+      // options={{ headerShown: false }}
+    />
+    <Tab.Screen
+      name="Transactions"
+      component={Transactions}
+      // options={{ headerShown: false }}
+    />
+    <Tab.Screen
+      name="Cards"
+      component={Cards}
+      // options={{ headerShown: false }}
+    />
+    <Tab.Screen
+      name="Wallet"
+      component={Wallet}
+      // options={{ headerShown: false }}
+    />
+    <Tab.Screen
+      name="Profile"
+      component={Profile}
+      // options={{ headerShown: false }}
+    />
+  </Tab.Navigator>
 );

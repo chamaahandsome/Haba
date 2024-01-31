@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Home } from "./home-page";
 import { Login } from "./login";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Profile } from "./profile";
+
 import { PlaidConnection } from "../components/plaid/plaid-screen";
 
 import { Main } from "./main-page";
@@ -24,7 +24,6 @@ export const DashboardPage = () => {
     >
       {/* <Stack.Screen name="Home" component={Home} /> */}
 
-      <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="HabaLink" component={PlaidConnection} />
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="LoggedIn" component={LoggedInScreen} />
