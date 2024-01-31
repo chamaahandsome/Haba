@@ -35,7 +35,7 @@ export const PlaidConnection = ({ navigation }: any) => {
         {/* <Text style={styles.text}>By clicking the below you link all of your bank accounts.</Text> */}
 
         <ScrollView>
-          <Image source={require('../../../assets/PlaidLink.png')} />
+          <Image source={require('../../../assets/PlaidLink.png')} height={100} width={100}/>
         </ScrollView>
 
         <PlaidHome navigation={navigation} />

@@ -37,7 +37,7 @@ export const HomeScreen = ({ navigation }: any) => {
   }, [linkToken]);
   
   return (
-    <SafeArea>
+
     <View style={{flex: 1}}>
       <View style={styles.heading}>
         <Text style={styles.titleText}>Haba</Text>
@@ -77,7 +77,7 @@ export const HomeScreen = ({ navigation }: any) => {
         </PlaidLink>
       </View>
     </View>
-    </SafeArea>
+
   );
 };
 

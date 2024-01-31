@@ -15,7 +15,9 @@ export const DashboardPlaidNavigation = (): React.ReactElement => {
     <SafeAreaProvider>
 
         <StatusBar barStyle="light-content" backgroundColor="#000000" />
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+      headerShown: false,
+    }}>
           <Stack.Screen
             name="Home"
             component={HomeScreen}

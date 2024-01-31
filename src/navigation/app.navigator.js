@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { DashboardPage } from "../screens/dashboard";
+import { DashboardPlaidNavigation } from "../screens/dashboard-plaid.navigation";
 import { Profile } from "../screens/profile";
 import { SafeArea } from "../../utils/safe-area.component";
 
