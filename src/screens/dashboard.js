@@ -11,6 +11,7 @@ import { Main } from "./main-page";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { HabaTabs } from "./tabs";
 import { LoggedInScreen } from "./logged-in.screen";
+import { AccountNavigator } from "../navigation/account.navigator";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ export const DashboardPage = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Home" component={Home} />
+      {/* <Stack.Screen name="Home" component={Home} /> */}
 
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="HabaLink" component={PlaidConnection} />

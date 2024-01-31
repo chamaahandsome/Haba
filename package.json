@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/lato": "^0.2.3",
+    "@expo-google-fonts/oswald": "^0.2.3",
     "@gorhom/bottom-sheet": "^4.6.0",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/bottom-tabs": "^6.5.11",
@@ -16,6 +18,7 @@
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "@react-navigation/stack": "^6.3.20",
     "@stripe/stripe-react-native": "0.28.0",
     "@types/react": "^18.2.48",
     "axios": "^1.6.7",
@@ -28,6 +31,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "firebase": "^10.7.2",
+    "lottie-react-native": "5.1.6",
     "native-base": "^3.4.28",
     "plaid": "^19.0.0",
     "react": "18.2.0",
