@@ -34,9 +34,9 @@ export const PlaidConnection = ({ navigation }: any) => {
         </View>
         {/* <Text style={styles.text}>By clicking the below you link all of your bank accounts.</Text> */}
 
-        <ScrollView>
-          <Image source={require('../../../assets/PlaidLink.png')} height={100} width={100}/>
-        </ScrollView>
+        <View style={styles.scrollContainer}>
+          <Image source={require('../../../assets/PlaidLink.png')} />
+        </View>
 
         <PlaidHome navigation={navigation} />
       </View>
@@ -54,6 +54,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     top: 40,
+  },
+  scrollContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: '100%', // Set the width to 100% to take the full width of the ScrollView
+    height: '100%', // Let the height adjust automatically to maintain the aspect ratio
   },
   title: {
     fontSize: 30,

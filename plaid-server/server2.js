@@ -14,7 +14,11 @@ const port = 8080;
 app.use(
   // FOR DEMO PURPOSES ONLY
   // Use an actual secret key in production
-  session({ secret: "bosco", saveUninitialized: true, resave: true })
+  session({
+    secret: "513e819424a921625af65dcfc4498c",
+    saveUninitialized: true,
+    resave: true,
+  })
 );
 
 app.use(bodyParser.urlencoded({ extended: false }));

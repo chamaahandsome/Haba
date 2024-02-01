@@ -53,7 +53,7 @@ export const AppNavigator = () => (
   <Tab.Navigator screenOptions={createScreenOptions}>
     <Tab.Screen
       name="Dashboard"
-      component={DashboardPlaidNavigation}
+      component={DashboardTest}
       // options={{ headerShown: false }}
     />
     <Tab.Screen

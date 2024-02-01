@@ -127,6 +127,9 @@ import { theme } from "./src/components/theme";
 import { SafeArea } from "./utils/safe-area.component";
 import { AuthenticationContextProvider } from "./src/authentication/authentication.context";
 import { Navigation } from "./src/navigation/nav-index";
+import { DashboardPage } from "./src/screens/dashboard";
+import { DashboardPlaidNavigation } from "./src/screens/dashboard-plaid.navigation";
+import { DashboardTest } from "./src/screens/dashboard-test";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBM8pmIpJAw_rINF2XylTla03GZHrAFMuU",

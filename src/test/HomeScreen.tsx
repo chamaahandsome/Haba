@@ -36,7 +36,7 @@ export const HomeScreen = ({ navigation }: any) => {
   return (
     <View style={{flex: 1}}>
       <View style={styles.heading}>
-        <Text style={styles.titleText}>Tiny Quickstart – React Native</Text>
+        <Text style={styles.titleText}>Haba</Text>
       </View>
       <View style={styles.bottom}>
         <PlaidLink

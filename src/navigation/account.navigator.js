@@ -18,6 +18,6 @@ export const AccountNavigator = () => (
     <Stack.Screen name="Main" component={AccountScreen} />
     <Stack.Screen name="Login" component={LoginScreen} />
     <Stack.Screen name="Register" component={RegisterScreen} />
-    {/* <Stack.Screen name="Dashboard" component={DashboardPlaidNavigation} /> */}
+    {/* <Stack.Screen name="Dashboard" component={DashboardPage} /> */}
   </Stack.Navigator>
 );
