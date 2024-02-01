@@ -14,11 +14,7 @@ const port = 8080;
 app.use(
   // FOR DEMO PURPOSES ONLY
   // Use an actual secret key in production
-  session({
-    secret: "513e819424a921625af65dcfc4498c",
-    saveUninitialized: true,
-    resave: true,
-  })
+  session({ secret: "bosco", saveUninitialized: true, resave: true })
 );
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,6 +38,7 @@ const client = new PlaidApi(config);
 //Creates a Link token and return it
 app.post("/api/create_link_token", async (req, res, next) => {
   let payload = {};
+  console.log(req.body);
   //Payload if running iOS
   if (req.body.address === "localhost") {
     payload = {
@@ -64,6 +61,7 @@ app.post("/api/create_link_token", async (req, res, next) => {
     };
   }
   const tokenResponse = await client.linkTokenCreate(payload);
+  console.log(tokenResponse.data);
   res.json(tokenResponse.data);
 });
 
@@ -77,6 +75,8 @@ app.post("/api/exchange_public_token", async (req, res, next) => {
   // Store access_token in DB instead of session storage
   req.session.access_token = exchangeResponse.data.access_token;
   res.json(true);
+
+  console.log(req.session.access_token);
 });
 
 // Fetches balance data using the Node client library for Plaid
@@ -86,6 +86,69 @@ app.post("/api/balance", async (req, res, next) => {
   res.json({
     Balance: balanceResponse.data,
   });
+});
+
+// Fetches balance data using the Node client library for Plaid
+app.post("/api/identity", async (req, res, next) => {
+  console.log("identity");
+  const access_token = req.session.access_token;
+  const identityResponse = await client.identityGet({ access_token });
+  res.json({
+    Identity: identityResponse.data,
+  });
+});
+
+// Fetches balance data using the Node client library for Plaid
+app.post("/api/investments/holdings/get", async (req, res, next) => {
+  console.log("investments");
+  const access_token = req.session.access_token;
+  const investmentResponse = await client.investmentsHoldingsGet({
+    access_token,
+  });
+  res.json({
+    Investments: investmentResponse.data,
+  });
+});
+
+// Fetches Plaid products available to us
+app.post("/api/item/get", async (req, res, next) => {
+  console.log("item");
+  const access_token = req.session.access_token;
+  const itemResponse = await client.itemGet({ access_token });
+  res.json({
+    item: itemResponse.data,
+  });
+});
+
+// Fetches Plaid products available to us
+app.post("/api/transactions/get", async (req, res, next) => {
+  const access_token = req.session.access_token;
+
+  const request = {
+    access_token: access_token,
+
+    start_date: "2018-01-01",
+
+    end_date: "2020-02-01",
+  };
+  const transactionsResponse = await client.transactionsGet(request);
+  res.json({
+    transactions: transactionsResponse.data.transactions,
+  });
+  const total_transactions = transactionsResponse.data.total_transactions;
+
+  while (transactionsResponse.data.transactions.length < total_transactions) {
+    const paginatedRequest = {
+      access_token: access_token,
+      start_date: "2018-01-01",
+      end_date: "2020-02-01",
+      options: {
+        offset: transactions.length,
+      },
+    };
+    const paginatedResponse = await client.transactionsGet(paginatedRequest);
+    transactions = transactions.concat(paginatedResponse.data.transactions);
+  }
 });
 
 app.listen(port, () => {

@@ -6,6 +6,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { DashboardPage } from "../screens/dashboard";
 import { DashboardPlaidNavigation } from "../screens/dashboard-plaid.navigation";
+import { DashboardTest } from "../screens/dashboard-test";
 import { Profile } from "../screens/profile";
 import { SafeArea } from "../../utils/safe-area.component";
 
@@ -52,7 +53,7 @@ export const AppNavigator = () => (
   <Tab.Navigator screenOptions={createScreenOptions}>
     <Tab.Screen
       name="Dashboard"
-      component={DashboardPage}
+      component={DashboardPlaidNavigation}
       // options={{ headerShown: false }}
     />
     <Tab.Screen

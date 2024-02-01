@@ -7246,7 +7246,7 @@ pkg-up@^3.1.0:
 
 plaid@^19.0.0:
   version "19.0.0"
-  resolved "https://registry.npmjs.org/plaid/-/plaid-19.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/plaid/-/plaid-19.0.0.tgz#505d345e8afb02f8743aa4185870279a7bf52fa2"
   integrity sha512-w2hlVRq1mhJsdjTLegXlMQoFaush3MkYBIiHyNLb4/eXYnlS4WV3Y6+kAWBTXd3d2flrsjsWSyEeImQXU9bSgg==
   dependencies:
     axios "^1.6.2"
@@ -7571,7 +7571,7 @@ react-native-paper@^5.12.2:
 
 react-native-plaid-link-sdk@^11.4.0:
   version "11.4.0"
-  resolved "https://registry.npmjs.org/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-11.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-11.4.0.tgz#31b8cbe2ca3784313066fe45db96bf2ec5a6cc61"
   integrity sha512-eI6wXEholdsZHV+HVQIQ5hJG+WTeVSShP8VdN82sumqJcV0m3tAJCvpl4zF1aIkCH3D7VX9nyhRsl6XSkT5G8A==
 
 react-native-reanimated@~3.3.0:
