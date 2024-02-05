@@ -75,7 +75,7 @@ export const PlaidHome = ({ navigation }: any) => {
 
           <PlaidLink
             tokenConfig={{ token: linkToken, noLoadingState: false }}
-            onSuccess={(success: LinkSuccess) => handleSuccess(success)}
+            onSuccess={(success: LinkSuccess) => {handleSuccess(success);  navigation.navigate('Main', success);}}
             onExit={(exit: LinkExit) => console.log(exit, 'exist123')}
           >
             <Text style={styles.buttonText}>Connect to your Bank</Text>
