@@ -11,23 +11,27 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-   
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.expo.plaid"
+      "bundleIdentifier": "com.chamaahandsome.Haba"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.expo.plaid"
+      "package": "com.chamaahandsome.Haba"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d8ed7422-c318-4bd5-bb2f-5c3a139f9e46"
+      }
     }
   }
 }

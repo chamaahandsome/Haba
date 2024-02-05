@@ -22,7 +22,7 @@ export const DashboardPage = () => {
         headerShown: false,
       }}
     >
-      {/* <Stack.Screen name="Home" component={Home} /> */}
+      <Stack.Screen name="Home" component={Home} />
 
       <Stack.Screen name="HabaLink" component={PlaidConnection} />
       <Stack.Screen name="Main" component={Main} />
