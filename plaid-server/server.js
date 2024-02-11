@@ -46,7 +46,7 @@ app.post("/api/create_link_token", async (req, res, next) => {
   if (req.body.address === "localhost") {
     payload = {
       user: { client_user_id: req.sessionID },
-      client_name: "Plaid Tiny Quickstart - React Native",
+      client_name: "Haba",
       language: "en",
       products: ["auth"],
       country_codes: ["US"],
@@ -56,7 +56,7 @@ app.post("/api/create_link_token", async (req, res, next) => {
     //Payload if running Android
     payload = {
       user: { client_user_id: req.sessionID },
-      client_name: "Plaid Tiny Quickstart - React Native",
+      client_name: "Haba",
       language: "en",
       products: ["auth"],
       country_codes: ["US"],
