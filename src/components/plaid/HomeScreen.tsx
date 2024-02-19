@@ -56,18 +56,20 @@ export const HomeScreen = ({ navigation }: any) => {
             token: linkToken,
             noLoadingState: false,
           }}
-          onSuccess={async (success: LinkSuccess) => {
-            await fetch(`http://${address}:8080/api/exchange_public_token`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ public_token: success.publicToken }),
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-            navigation.navigate('Success', success);
+          // onSuccess={async (success: LinkSuccess) => {
+          //   await fetch(`http://${address}:8080/api/exchange_public_token`, {
+          //   method: "POST",
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          //   body: JSON.stringify({ public_token: success.publicToken }),
+          //   })
+          //   .catch((err) => {
+          //     console.log(err);
+          //   });
+          //   navigation.navigate('Success', success);
+          onSuccess={(success: LinkSuccess) => {
+            console.log('Plaid success:', success);
           }}
           onExit={(response: LinkExit) => {
             console.log(response);

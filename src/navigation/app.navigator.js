@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { DashboardPage } from "../screens/dashboard";
+import { DashboardStripeNavigation } from "../screens/dashboard-stripe.navigation";
 import { DashboardPlaidNavigation } from "../screens/dashboard-plaid.navigation";
 import { DashboardTest } from "../screens/dashboard-test";
 import { Profile } from "../screens/profile";
@@ -53,7 +54,7 @@ export const AppNavigator = () => (
   <Tab.Navigator screenOptions={createScreenOptions}>
     <Tab.Screen
       name="Dashboard"
-      component={DashboardTest}
+      component={DashboardPlaidNavigation}
       // options={{ headerShown: false }}
     />
     <Tab.Screen
